@@ -14,11 +14,4 @@ class GeneralFrame(wx.Frame):
         pass
 
 
-def show_window():
-    app = wx.App(redirect=True)
-    # Redirect in the standard console, and not stdout/stderr
-    general_window = GeneralFrame(None)  # Create an object [Instance] forms
-    # (In the terminology wxwidgets this window)
 
-    general_window.Show(True)
-    app.MainLoop()
