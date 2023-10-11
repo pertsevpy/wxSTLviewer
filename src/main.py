@@ -1,18 +1,25 @@
 """
-Main wxSTL viewer module
+Main wxStlViewer module
+
+@copyright: 2023 Pavel Pertsev
+@license: GNU GPL-3.0  (see LICENSE file) - provided as is, no warranty
 """
 
 # import general python modules
-import logging, sys
+import logging
+import sys
+
+# third party modules
+import wx
 
 # import project modules
-# TODO: understand scopes and multiple imports after creating event handlers
-from wxgui import *
+from wxgui import GeneralFrame
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.NOTSET, filename="wxSTLviewer.log", filemode="w")
+    logging.basicConfig(level=logging.NOTSET, filename="wxStlViewer.log", filemode="w")
     logging.info(f"Using Python {sys.version.split()[0]}")
     logging.info(f"Using wxPython {wx.version()}")
+
     app = wx.App()
     # Redirect in the standard console, and not stdout/stderr
     general_window = GeneralFrame(None)  # Create an object [Instance] forms
